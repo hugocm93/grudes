@@ -1,0 +1,8 @@
+services:
+  grudes_api:
+    build:
+      context: grudes_api 
+      target: test
+    image: grudes_api 
+    volumes:
+      - ./grudes_api:/app
