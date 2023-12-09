@@ -1,0 +1,6 @@
+[submodule "grudes_api"]
+	path = grudes_api
+	url = https://github.com/hugocm93/grudes_api.git
+[submodule "grudes_web_client"]
+	path = grudes_web_client
+	url = https://github.com/hugocm93/grudes_web_client.git

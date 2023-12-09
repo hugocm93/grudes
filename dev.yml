@@ -1,0 +1,13 @@
+services:
+  grudes_web_client:
+    build:
+      target: dev
+      context: grudes_web_client 
+    volumes:
+      - ./grudes_web_client:/app
+  grudes_api:
+    build:
+      target: dev
+      context: grudes_api 
+    volumes:
+      - ./grudes_api:/app
