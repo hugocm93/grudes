@@ -1,13 +1,17 @@
 # Grudes Web Client
 
-Projeto de avaliação da sprint "Qualidade de Software, Segurança e Sistemas Inteligentes" do curso de Pós-graduação da PUC-Rio em Engenharia de Software.
+ Projeto de avaliação da sprint "Qualidade de Software, Segurança e Sistemas Inteligentes" do curso de Pós-graduação da PUC-Rio em Engenharia de Software.
 
 ---
 ## Download do repo
-### Para inicializar corretamente os submódulos, clone usando o comando a seguir:
- `git clone --recurse-submodules https://github.com/hugocm93/grudes.git`
-### Ou se o clone já foi feito sem o parâmetro:
- `git submodule update --init`
+ ### Para inicializar corretamente os submódulos, clone usando o comando a seguir:
+```sh
+git clone --recurse-submodules https://github.com/hugocm93/grudes.git
+```
+ ### Ou se o clone já foi feito sem o parâmetro:
+```sh
+git submodule update --init
+```
 
 ---
 ## Requisitos 
@@ -18,15 +22,15 @@ Projeto de avaliação da sprint "Qualidade de Software, Segurança e Sistemas I
 
 ---
 ## Execução
-Na raiz deste repositório, executar:
+ Na raiz deste repositório, executar:
 ```sh
-$ sudo docker compose up --build 
+sudo docker compose up --build 
 ```
-Ou para modo desenvolvimento:
+ Ou para modo desenvolvimento:
 ```sh
-$ sudo docker compose -f docker-compose.yml -f dev.yml up --build 
+sudo docker compose -f docker-compose.yml -f dev.yml up --build 
 ```
-Abra o navegador no endereço http://localhost:3000/ para entrar no site.
+ Abra o navegador no endereço http://localhost:3000/ para entrar no site.
 
 ---
 ## Documentação
@@ -39,21 +43,22 @@ Abra o navegador no endereço http://localhost:3000/ para entrar no site.
 
 ---
 ## Sistema inteligente
- O sistema inteligente desenvolvido utiliza um modelo de _machine learning_ (ML) supervisionado para fazer predições (classificação) sobre a origem
-gastronômica de uma receita baseadas em seus ingredientes. 
-O _data set_ utilizado foi o [Recipe Ingredients Dataset](https://www.kaggle.com/datasets/kaggle/recipe-ingredients-dataset/data?select=train.json) obtido do site [Kaggle](https://www.kaggle.com).
-Para informação de como usar a funcionalidade, leia a parte de Documentação acima.
+ O sistema inteligente desenvolvido utiliza um modelo de _machine learning_ (ML) supervisionado para fazer predições (classificação) sobre a origem gastronômica de uma receita baseadas em seus ingredientes. 
+ O _data set_ utilizado foi o [Recipe Ingredients Dataset](https://www.kaggle.com/datasets/kaggle/recipe-ingredients-dataset/data?select=train.json) obtido do site [Kaggle](https://www.kaggle.com).
+ Para informação de como usar a funcionalidade, leia a parte de Documentação acima.
 
  ### Notebook 
- Foi utilizado um notebook do Google Colab para a criação do modelo de ML que está localizado em ./grudes_api/ML/RecipeOriginClassifier.ipynb.
+  Foi utilizado um notebook do Google Colab para a criação do modelo de ML que está localizado em ./grudes_api/ML/RecipeOriginClassifier.ipynb.
 
  ### Testes automatizados
- Testam o modelo de ML quanto aos requisitos de desempenho desejado para o projeto. 
- Para executá-los:
- `sudo docker compose -f test.yml up --build`
+  Testam o modelo de ML quanto aos requisitos de desempenho desejado para o projeto. 
+  Para executá-los:
+```sh
+sudo docker compose -f test.yml up --build
+```
 
 ---
 ## Serviços utilizados:
-* [Grudes API](https://github.com/hugocm93/grudes_api) para gerenciamento da lista de receitas pessoais. Foi implementada por mim para o curso de Pós-graduação da PUC-Rio em Engenharia de Software.
-* [Grudes Web Client](https://github.com/hugocm93/grudes_web_client) como front-end. Foi implementada por mim para o curso de Pós-graduação da PUC-Rio em Engenharia de Software.
-* [TheMealBD](https://www.themealdb.com/api.php) para procurar novas receitas. Esta API é gratuita para fins educacionais. Nenhuma autenticação é necessária pois só foram usadas rotas presentes na versão gratuita. Rotas utilizadas: www.themealdb.com/api/json/v1/1/search.php, www.themealdb.com/api/json/v1/1/lookup.php, www.themealdb.com/api/json/v1/1/filter.php.
+ * [Grudes API](https://github.com/hugocm93/grudes_api) para gerenciamento da lista de receitas pessoais. Foi implementada por mim para o curso de Pós-graduação da PUC-Rio em Engenharia de Software.
+ * [Grudes Web Client](https://github.com/hugocm93/grudes_web_client) como front-end. Foi implementada por mim para o curso de Pós-graduação da PUC-Rio em Engenharia de Software.
+ * [TheMealBD](https://www.themealdb.com/api.php) para procurar novas receitas. Esta API é gratuita para fins educacionais. Nenhuma autenticação é necessária pois só foram usadas rotas presentes na versão gratuita. Rotas utilizadas: www.themealdb.com/api/json/v1/1/search.php, www.themealdb.com/api/json/v1/1/lookup.php, www.themealdb.com/api/json/v1/1/filter.php.
