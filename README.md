@@ -48,7 +48,7 @@ sudo docker compose -f docker-compose.yml -f dev.yml up --build
  Para informação de como usar a funcionalidade, leia a parte de Documentação acima.
 
  ### Notebook 
-  Foi utilizado um notebook do Google Colab para a criação do modelo de ML que está localizado em ./grudes_api/ML/RecipeOriginClassifier.ipynb.
+  Foi utilizado um notebook do Google Colab para a criação do modelo de ML que está localizado em ./RecipeOriginClassifier.ipynb.
 
  ### Testes automatizados
   Testam o modelo de ML quanto aos requisitos de desempenho desejado para o projeto. 
